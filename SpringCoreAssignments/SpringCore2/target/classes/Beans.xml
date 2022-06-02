@@ -1,0 +1,44 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<!-- Definition for question -->
+	<bean id="questions" class="com.cg.springcore2.Question">
+
+		<property name="questionId" value="01"></property>
+		<property name="question" value="What is your country?"></property>
+		<property name="answer" ref="answers"></property>
+
+	</bean>
+	<!-- Definition for answer -->
+	<bean id="answers" class="com.cg.springcore2.Answer">
+
+
+		<property name="answerList">
+			<list>
+				<value>INDIA</value>
+				
+			</list>
+		</property>
+
+
+		<property name="answerSet">
+			<set>
+				<value>INDIA</value>
+				
+			</set>
+		</property>
+
+
+		<property name="answerMap">
+			<map>
+				<entry key="1" value="INDIA" />
+				
+			</map>
+		</property>
+	</bean>
+</beans>
